@@ -4,15 +4,22 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 import * as styles from './hero.module.css'
 
 const Hero = ({ image, title, content }) => (
-  <div className={styles.hero}>
-    {image && (
-      <GatsbyImage className={styles.image} alt={title} image={image} />
-    )}
-    <div className={styles.details}>
-      <h1 className={styles.title}>{title}</h1>
+ 
+    <div className="static">
+      <div>
+      {image && (
+        <GatsbyImage className="bg-fixed" alt={title} image={image} />
+      )}
+        </div>
+ <div className="absolute top-64 md:top-48 md:left-16 p-8 md:p-16 bg-white md:w-6/12">
+      <h1 className="text-3xl font-bold underline pb-8">{title}</h1>
       {content && <p className={styles.content}>{content}</p>}
     </div>
-  </div>
+    </div>
+
+   
+ 
+
 )
 
 export default Hero

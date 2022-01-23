@@ -66,9 +66,13 @@ public
 # Contentful config file
 .contentful.json
 
+#Contentful II
+.env.development
+
 # Local Netlify folder
 .netlify
 
 # System files
 .DS_Store
 Thumbs.db
+
