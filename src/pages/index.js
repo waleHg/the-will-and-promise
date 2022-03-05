@@ -21,8 +21,8 @@ class RootIndex extends React.Component {
           content={author.shortBio.shortBio}
         />
         <Quote 
-         image={icon.heroImage.gatsbyImageData}
-         content={author.shortBio.shortBio}
+         image={author.heroImage.gatsbyImageData}
+        //  content={author.shortBio.shortBio}
         />
 
         <ArticlePreview posts={posts} />

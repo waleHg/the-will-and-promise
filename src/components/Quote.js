@@ -6,7 +6,7 @@ import * as styles from './hero.module.css'
 const Hero = ({ image, content }) => (
  
     <div className="static">
-      <div>
+      <div className="place-content-center p-40">
       {image && (
         <GatsbyImage className="" alt={image} image={image} />
       )}
