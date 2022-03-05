@@ -5,11 +5,13 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ArticlePreview from '../components/article-preview'
+import Quote from '../components/Quote'
 
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    const icon = get(this, 'props.data.allContentfulIcon.nodes')
 
     return (
       <Layout location={this.props.location}>
@@ -18,6 +20,11 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio.shortBio}
         />
+        <Quote 
+         image={icon.heroImage.gatsbyImageData}
+         content={author.shortBio.shortBio}
+        />
+
         <ArticlePreview posts={posts} />
       </Layout>
     )
