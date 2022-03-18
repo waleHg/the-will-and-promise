@@ -11,21 +11,28 @@ class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
     const [author] = get(this, 'props.data.allContentfulPerson.nodes')
-    const icon = get(this, 'props.data.allContentfulIcon.nodes')
+    const [bible] = get(this, 'props.data.allContentfulQuote.nodes')
 
     return (
       <Layout location={this.props.location}>
+
+
+
         <Hero
           image={author.heroImage.gatsbyImageData}
           title={author.name}
           content={author.shortBio.shortBio}
         />
-        <Quote 
-         image={author.heroImage.gatsbyImageData}
-        //  content={author.shortBio.shortBio}
+
+        <Quote
+
+          icon={bible.icon.gatsbyImageData}
+          verse={bible.title}
+          reference={bible.reference}
         />
 
         <ArticlePreview posts={posts} />
+
       </Layout>
     )
   }
@@ -35,6 +42,24 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+
+    allContentfulQuote(
+      filter: { contentful_id: { eq: "5dNnCoPvgLj8wquimKgHxy" } }
+    ) {
+      nodes {
+        title
+        reference
+        icon: image {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            width: 48
+            height: 48
+          )
+        }
+      }
+    }
+
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       nodes {
         title
@@ -74,5 +99,7 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
+
+  
+}
 `

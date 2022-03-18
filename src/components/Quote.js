@@ -3,22 +3,26 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 import * as styles from './hero.module.css'
 
-const Hero = ({ image, content }) => (
- 
-    <div className="static">
-      <div className="place-content-center p-40">
-      {image && (
-        <GatsbyImage className="" alt={image} image={image} />
+const Quote = ({ icon, verse, reference }) => (
+
+  <div className="py-24 text-center">
+  
+  <div>
+      {icon && (
+        <GatsbyImage className="" alt={icon} image={icon} />
       )}
         </div>
- <div className="md:left-32 p-8 md:p-16 bg-white">
-      {content && <p className={styles.content}>{content}</p>}
-    </div>
-    </div>
+<div className="pt-8">
+  <h1 className="text-3xl font-bold pb-8">{verse}</h1>
+  {reference && <p className={styles.content}>{reference}</p>}
+</div>
+</div>
 
-   
- 
 
 )
 
-export default Hero
+
+ 
+
+
+export default Quote
