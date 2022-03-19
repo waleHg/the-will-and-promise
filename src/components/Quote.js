@@ -12,9 +12,9 @@ const Quote = ({ icon, verse, reference }) => (
         <GatsbyImage className="" alt={icon} image={icon} />
       )}
         </div>
-<div className="pt-8">
-  <h1 className="text-3xl font-bold pb-8">{verse}</h1>
-  {reference && <p className={styles.content}>{reference}</p>}
+<div className="p-8">
+  <span className="text-3xl font-bold pb-8">{verse}{" "}  <span className=" text-indigo-900">{reference}</span></span>
+
 </div>
 </div>
 

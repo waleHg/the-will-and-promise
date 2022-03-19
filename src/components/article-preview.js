@@ -12,6 +12,43 @@ const ArticlePreview = ({ posts }) => {
 
   return (
     <Container>
+      <h1 className="text-3xl font-bold pb-8 text-center">Explore topics</h1>
+      <ul className="flex gap-4 mb-8 md:mb-12 md:justify-center overflow-x-scroll p-4">
+      <li className="">
+      <Link to="/blog/" className="  bg-slate-600 text-white font-bold px-4 py-3 rounded-full hover:text-stone-100">
+       Newsletter
+      </Link>
+    </li>
+    
+    <li className="">
+      <Link to="/blog/" className=" bg-slate-200 text-gray-600 font-bold px-4 py-3 rounded-full">
+       Newsletter
+      </Link>
+    </li>
+
+    <li className="">
+      <Link to="/blog/" className=" bg-slate-200 text-gray-600 font-bold px-4 py-3 rounded-full">
+       Newsletter
+      </Link>
+    </li>
+
+    <li className="">
+      <Link to="/blog/" className=" bg-slate-200 text-gray-600 font-bold px-4 py-3 rounded-full">
+       Newsletter
+      </Link>
+    </li>
+
+    <li className="">
+      <Link to="/blog/" className=" bg-slate-200 text-gray-600 font-bold px-4 py-3 rounded-full">
+       Newsletter
+      </Link>
+    </li>
+    <li className="">
+      <Link to="/blog/" className=" bg-slate-200 text-gray-600 font-bold px-4 py-3 rounded-full">
+       Newsletter
+      </Link>
+    </li>
+  </ul>
       <ul className={styles.articleList}>
         {posts.map((post) => {
           return (
