@@ -1,8 +1,6 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import * as styles from './hero.module.css'
-
 const Quote = ({ icon, verse, reference }) => (
 
   <div className="py-20 text-center">
