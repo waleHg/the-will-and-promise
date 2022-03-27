@@ -4,7 +4,7 @@ const Container = ({ children, as = 'div' }) => {
   const Tag = as
 
   return (
-    <Tag className="bg-slate-100 p-8 md:p-16"
+    <Tag className="bg-slate-100 p-8 md:p-12"
       style={{
         maxWidth: 'var(--size-min-width)',
         margin: '0 auto',
