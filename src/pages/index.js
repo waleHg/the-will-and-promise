@@ -27,7 +27,7 @@ class RootIndex extends React.Component {
         <Quote
 
           icon={bible.icon.gatsbyImageData}
-          verse={bible.title}
+          verse={bible.content}
           reference={bible.reference}
         />
 
@@ -47,7 +47,7 @@ export const pageQuery = graphql`
       filter: { contentful_id: { eq: "5dNnCoPvgLj8wquimKgHxy" } }
     ) {
       nodes {
-        title
+        content
         reference
         icon: image {
           gatsbyImageData(
