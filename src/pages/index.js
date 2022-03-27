@@ -95,6 +95,7 @@ export const pageQuery = graphql`
             layout: CONSTRAINED
             placeholder: BLURRED
             width: 1180
+            height: 680
           )
         }
       }

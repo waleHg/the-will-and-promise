@@ -26,12 +26,8 @@ class BlogPostTemplate extends React.Component {
           title={post.title}
           content={post.description?.childMarkdownRemark?.excerpt}
         />
-        <div className={styles.container}>
-          <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
-            <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
-          </span>
+        <div className="">
+         
           <div className={styles.article}>
             <div
               className={styles.body}
@@ -84,7 +80,10 @@ export const pageQuery = graphql`
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, width: 1280)
+        gatsbyImageData(layout: CONSTRAINED
+          placeholder: BLURRED
+          width: 1180
+          height: 480)
         resize(height: 630, width: 1200) {
           src
         }

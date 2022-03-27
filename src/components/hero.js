@@ -11,9 +11,9 @@ const Hero = ({ image, title, content }) => (
         <GatsbyImage className="bg-fixed w-full" alt={title} image={image} />
       )}
         </div>
- <div className="md:absolute md:top-48 md:left-32 p-8 md:p-16 bg-white md:w-4/12">
+ <div className="md:absolute md:top-48 md:left-12 lg:left-32 lg:p-16 p-8 md:p-12 md:bg-white bg-slate-50 md:w-9/12 lg:w-4/12">
       <h1 className="text-3xl font-bold pb-8">{title}</h1>
-      {content && <p className={styles.content}>{content}</p>}
+      {content && <p className="font-medium text-xl">{content}</p>}
     </div>
     </div>
 

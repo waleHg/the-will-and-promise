@@ -5,15 +5,15 @@ import * as styles from './hero.module.css'
 
 const Quote = ({ icon, verse, reference }) => (
 
-  <div className="py-24 text-center">
+  <div className="py-20 text-center">
   
   <div>
       {icon && (
         <GatsbyImage className="" alt={icon} image={icon} />
       )}
         </div>
-<div className="p-8">
-  <span className="text-3xl font-bold pb-8">{verse}{" "}  <span className=" text-indigo-900">{reference}</span></span>
+<div className="p-4 md:p-8 w-auto lg:w-6/12 mx-auto">
+  <span className="text-xl md:text-3xl font-bold pb-8">{verse}{" "}  <span className=" text-indigo-900">{reference}</span></span>
 
 </div>
 </div>

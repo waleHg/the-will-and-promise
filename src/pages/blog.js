@@ -4,7 +4,7 @@ import get from 'lodash/get'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
-import Hero from '../components/hero'
+import BlogHero from '../components/blog-hero'
 import ArticlePreview from '../components/article-preview'
 
 class BlogIndex extends React.Component {
@@ -12,10 +12,15 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location="{this.props.location}">
+        <div ClassName='flex-col'>
         <Seo title="Blog" />
-        <Hero title="Blog" />
+        <BlogHero title="Learn & Grow!" 
+          content="Guided Learning and Empowered Self-Development
+          Content to help you flourish in your relationship with God and create an environment where His true nature can stand out."/>
         <ArticlePreview posts={posts} />
+        </div>
+      
       </Layout>
     )
   }
