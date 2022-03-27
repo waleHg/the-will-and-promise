@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
       <Layout location="{this.props.location}">
         <div ClassName='flex-col'>
         <Seo title="Blog" />
-        <BlogHero title="Learn & Grow! " 
+        <BlogHero title="Learn & Grow!" 
           content="Guided Learning and Empowered Self-Development
           Content to help you flourish in your relationship with God and create an environment where His true nature can stand out."/>
         <ArticlePreview posts={posts} />
