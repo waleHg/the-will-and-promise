@@ -12,7 +12,7 @@ const ArticlePreview = ({posts}) => {
 
   return (
     <Container>
-      <h1 className="text-3xl font-bold pb-8 text-center">Explore topics</h1>
+      <h1 className="text-3xl font-bold pb-8 text-center">Journey with The Will and Promise</h1>
       <ul className="flex flex-nowrap gap-4 mb-8 md:mb-12 md:justify-center overflow-x-scroll py-4 scrollbar-hide -mr-5">
         <li className="special-li">
           <Link to="/blog/" className="bg-slate-600 text-white font-bold px-4 py-3 rounded-full hover:text-stone-100">

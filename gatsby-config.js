@@ -36,8 +36,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful Starter",
-    description: "Official Contentful Gatsby Starter",
+    title: "The will and promise",
+    description: "The Will and Promise invites you to a love-based approach to life - a life that’s devoid of performance, a life that chooses to securely rest and receive Abba's love with open hands.",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
