@@ -42,6 +42,8 @@ class RootIndex extends React.Component {
           heading={newsletter.heading}
           body={newsletter.body}
         />
+
+        
       </Layout>
     )
   }
